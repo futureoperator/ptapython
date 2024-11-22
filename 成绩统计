@@ -1,0 +1,20 @@
+'''现有某班级Python考试成绩，请你帮老师做一下成绩统计，找出最高分、最低分，算出平均分，统计出不及格人数。
+
+输入格式:
+输入在第一行给出班级人数n，第二行为n个学生的成绩（0~100之间的整数），中间用空格分隔。
+
+输出格式:
+输出共四行，分别为最高分、最低分、平均分和不及格人数，其中平均分保留1位小数。'''
+n=int(input())
+ls=list(map(eval,input().split()))
+gao=max(ls)
+di=min(ls)
+ave=sum(ls)/len(ls)
+fail=0
+for i in range(len(ls)):
+        if ls[i]<60:
+            fail+=1
+print('Max: {}'.format(gao))
+print('Min: {}'.format(di))
+print('Ave: {}'.format(ave))
+print('Fail: {}'.format(fail))
